@@ -1,0 +1,55 @@
+<html>
+<head>
+<link rel="shortcut  icon" type="image/x-icon" href="favicon.ico" media="screen"  />
+<meta name="wot-verification" content="323e64fe05406f275739"/>
+</head>
+<body bgcolor=000000 onload="show_date_time();">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-105687210-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script language=javascript> 
+var un="???"
+var event="海洋"//事件
+function padding1(num, length) {
+        for(var len = (num + "").length; len < length; len = num.length) {
+            num = "0" + num;            
+        }
+        return num;
+    }
+function show_date_time(){ 
+window.setTimeout("show_date_time()", 1); 
+BirthDay=new Date("2018-7-18 0:00 GMT");//设置日期 
+today=new Date(); 
+msPerDay=50*24000;
+time=Math.abs(BirthDay.getTime()-today.getTime()); 
+tick=time/50;
+sec=time/(50)*3.6;
+min=sec/60;
+hour=min/60;
+day=hour/24;
+month=day/30;
+year=month/12;
+document.getElementById("span_a").innerHTML="<b><font color=00CC00>"+event+"纪元 <br><br><font size=5 color=FF0000> "+parseInt(year)+" 年 "+parseInt(month%12+1)+" 月 "+parseInt(day%30+1)+" 日 <br>"+padding1(parseInt(hour%24),2)+" : "+padding1(parseInt(min%60),2)+" : "+padding1(parseInt(sec%60),2)+"<br>总第 "+parseInt(tick)+" 刻</b></font>";
+} 
+show_date_time(); 
+</script>
+
+<span id="span_a" style='align=center no:1px solid black;' ></span>
+<title>Minecraft日历</title>
+
+
+
+<font size=5 color=00FF00>
+<!--<audio controls loop autostart><source src="Kyle Gabler-The Last of the Goo Balls and the Telescope Operator.mp3"  type=audio/mp3></audio><br>
+<br>
+</font>
+-->
+</body>
+</html>
